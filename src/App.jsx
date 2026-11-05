@@ -1,11 +1,13 @@
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+
 function App() {
   return (
-    <main className="p-10">
-      <h1 className="font-titulo text-4xl text-turquesa">Locus Cine</h1>
-      <p className="mt-2 text-suave">
-        Se você vê o fundo azul escuro e este título turquesa, o Tailwind funcionou.
-      </p>
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   )
 }
 

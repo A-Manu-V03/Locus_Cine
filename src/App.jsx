@@ -1,8 +1,10 @@
+
 import { Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Seats from './pages/Seats'
+import MeusIngressos from './pages/MeusIngressos'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
@@ -16,6 +18,15 @@ function App() {
         element={
           <ProtectedRoute>
             <Seats />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/meus-ingressos"
+        element={
+          <ProtectedRoute>
+            <MeusIngressos />
           </ProtectedRoute>
         }
       />
